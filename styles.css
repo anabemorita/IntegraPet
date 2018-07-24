@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+}
+
+h1{
+    font-family: fantasy;
+    font-size: 30pt;
+    margin: 0;
+}
+
+section{
+    height: 100vh;
+ }
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.primeira{
+    height: 35vh;
+    justify-content: space-evenly;
+}
+
+.login{
+    justify-content: space-between;
+}
+
+#email, #senha, #login{
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+button{
+    height: 5vh;
+    width: 5vw;
+}
