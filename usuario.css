@@ -65,22 +65,33 @@ h2{
     align-items: center;
 }
 
+
+.dono, .pet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: -1;
+    transition: 2s; 
+    height: 200px;
+    transform: translateY(-200px);
+}
+
 .active{
     transform: translateY(0);
     transform-style: preserve-3d;
     z-index: 1;
     transition: 2s; 
 }
-.dono, .pet{
-    z-index: -1;
-    transition: 2s; 
-    height: 200px;
-}
 
+.esconde{
+    display: none;
+}
 .dono p, .pet p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12pt;
     color: black;
+    margin: auto;
 }
 
 .servicos{
