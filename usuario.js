@@ -18,15 +18,13 @@ function mostrarUsuario(){
         dono.classList.remove("esconde");
         pet.classList.add("esconde");
         divServicos.classList.add("acompanhar");
-        divData.classList.add("acompanhar");
         petImg.classList.remove("clique");
     }    
     else{
         userImg.classList.remove("clique");
         divDados.classList.remove("active");
         dono.classList.remove("active");
-        divServicos.classList.remove("acompanhar");
-        divData.classList.remove("acompanhar");
+        divServicos.classList.remove("acompanhar");        
         dono.classList.remove("esconde");
     }
 }
@@ -40,8 +38,12 @@ function mostrarPet(){
         dono.classList.add("esconde");
         pet.classList.remove("esconde");
         divServicos.classList.add("acompanhar");
-        divData.classList.add("marcarData");
         userImg.classList.remove("clique");
+        if(divData.classList.contains("dataActive")){
+            divData.classList.add("descer");
+        }else{
+            divData.classList.remove("descer");
+        }
     }
     else{
         petImg.classList.remove("clique");
@@ -49,7 +51,6 @@ function mostrarPet(){
         pet.classList.add("active");
         pet.classList.remove("esconde");
         divServicos.classList.remove("acompanhar");
-        divData.classList.remove("marcarData");
     }
 }
 
@@ -62,12 +63,12 @@ function mostrarMarcarData(){
         }
         this.classList.add("cliqueServico");
         divData.classList.add("active");
-        divData.classList.add("marcarData");
+        divData.classList.add("dataActive");
     }
     else{
         this.classList.remove("cliqueServico");
         divData.classList.remove("active");
-        divData.classList.remove("marcarData");
+        divData.classList.remove("dataActive");
     }
 }
 
