@@ -39,11 +39,6 @@ function mostrarPet(){
         pet.classList.remove("esconde");
         divServicos.classList.add("acompanhar");
         userImg.classList.remove("clique");
-        if(divData.classList.contains("dataActive")){
-            divData.classList.add("descer");
-        }else{
-            divData.classList.remove("descer");
-        }
     }
     else{
         petImg.classList.remove("clique");

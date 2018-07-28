@@ -54,7 +54,6 @@ h2{
 
 .dados{
     position: absolute;
-    /* bottom: 360px; */
     transform: translateY(-200px);
     transform-style: preserve-3d;
     z-index: -5;
@@ -78,6 +77,13 @@ h2{
     transform: translateY(-200px);
 }
 
+.dono p, .pet p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    color: black;
+    margin: auto;
+}
+
 .active{
     transform: translateY(0);
     transform-style: preserve-3d;
@@ -87,12 +93,6 @@ h2{
 
 .esconde{
     display: none;
-}
-.dono p, .pet p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12pt;
-    color: black;
-    margin: auto;
 }
 
 .servicos{
@@ -152,10 +152,6 @@ li img{
     position: relative;
     height: 150px;
     background-color: lightgray;
-}
-
-.manterEscondido{
-    transform: translateY(0px);
 }
 
 .dataActive {
