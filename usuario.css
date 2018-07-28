@@ -109,20 +109,19 @@ ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    height: calc(200px + 1.6vh);
 }
 
 li{
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
 }
 
 li .item{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    box-sizing: border-box;
 }
 
 li img{
@@ -130,7 +129,58 @@ li img{
     height: 32px;
 }
 
+.cliqueServico{
+    opacity: .4;
+}
+
 .item:hover{
     cursor: pointer;
     transform: scale(1.1);
 }
+
+.dataDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 2s;
+    transform: translateY(-200px);
+    z-index: -5;
+    position: relative;
+    height: 150px;
+}
+.marcarData {
+    transform: translateY(0);
+}
+
+label, input{
+    margin: 2vh 0;
+}
+
+button{
+    background:#222;
+    color:white;
+    cursor:pointer;
+    transition:1s ease;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    height: 25px;
+    width: 65px;
+    font-weight: bold;
+}
+
+button:focus {
+    outline:none;
+}
+
+button:active {
+    background:#eee;
+    color:#222;
+    transition:0.4s ease;
+}
+
+button:hover {
+    transform:translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition:0.5s ease;
+}
+

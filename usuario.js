@@ -4,10 +4,10 @@ const dono = document.querySelector(".dono");
 const pet = document.querySelector(".pet");
 const divDados = document.querySelector(".dados");
 const divServicos = document.querySelector(".servicos");
+const divData = document.querySelector(".dataDiv");
+const servicos = document.querySelectorAll(".item");
+const botaoMarcar = document.querySelector("button");
 
-
-userImg.addEventListener('click', mostrarUsuario);
-petImg.addEventListener('click', mostrarPet);
 
 function mostrarUsuario(){
     if(!userImg.classList.contains("clique")){
@@ -18,6 +18,7 @@ function mostrarUsuario(){
         dono.classList.remove("esconde");
         pet.classList.add("esconde");
         divServicos.classList.add("acompanhar");
+        divData.classList.add("acompanhar");
         petImg.classList.remove("clique");
     }    
     else{
@@ -25,6 +26,7 @@ function mostrarUsuario(){
         divDados.classList.remove("active");
         dono.classList.remove("active");
         divServicos.classList.remove("acompanhar");
+        divData.classList.remove("acompanhar");
         dono.classList.remove("esconde");
     }
 }
@@ -38,6 +40,7 @@ function mostrarPet(){
         dono.classList.add("esconde");
         pet.classList.remove("esconde");
         divServicos.classList.add("acompanhar");
+        divData.classList.add("marcarData");
         userImg.classList.remove("clique");
     }
     else{
@@ -46,5 +49,30 @@ function mostrarPet(){
         pet.classList.add("active");
         pet.classList.remove("esconde");
         divServicos.classList.remove("acompanhar");
+        divData.classList.remove("marcarData");
     }
+}
+
+function mostrarMarcarData(){
+    if(!this.classList.contains("cliqueServico")){
+        for(item of servicos){
+            if(item.classList.contains("cliqueServico") && item !== this){
+                item.classList.remove("cliqueServico");
+            }
+        }
+        this.classList.add("cliqueServico");
+        divData.classList.add("active");
+        divData.classList.add("marcarData");
+    }
+    else{
+        this.classList.remove("cliqueServico");
+        divData.classList.remove("active");
+        divData.classList.remove("marcarData");
+    }
+}
+
+userImg.addEventListener('click', mostrarUsuario);
+petImg.addEventListener('click', mostrarPet);
+for(item of servicos){
+    item.addEventListener('click', mostrarMarcarData);
 }
